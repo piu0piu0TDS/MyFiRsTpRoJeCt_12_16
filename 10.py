@@ -7,7 +7,7 @@ from datetime import datetime
 pygame.init()
 
 # 2. 게임창 옵션 설정
-size = [400, 900]
+size = [400, 600]
 screen = pygame.display.set_mode(size)
 
 title = "My Game"
@@ -42,7 +42,7 @@ def crash(a, b):
     else : 
         return False
 ss = obj()
-ss.put_img("D:/temp/ss.png")
+ss.put_img("./ss.png")
 ss.change_size(50,80)
 ss.x = round(size[0]/2- ss.sx/2)
 ss.y = size[1] -ss.sy - 15
@@ -72,7 +72,7 @@ while SB == 0:
             if event.key == pygame.K_SPACE:
                 SB = 1
     screen.fill(black)
-    font = pygame.font.Font("C:/Windows/Fonts/BMDOHYEON_ttf.ttf", 15)
+    font = pygame.font.Font("C:/Windows/Retro Gaming", 15)
     text = font.render("PRESS SPACE KEY TO START THE GAME", True, (255,255,255))
     screen.blit(text, (40, round(size[1]/2-50)))    
     pygame.display.flip()
@@ -120,7 +120,7 @@ while SB == 0:
     
     if space_go == True and k % 6 == 0:
         mm = obj()
-        mm.put_img("D:/temp/bullet.png")
+        mm.put_img("./bullet.png")
         mm.change_size(5,15)
         mm.x = round(ss.x + ss.sx/2 - mm.sx/2)
         mm.y = ss.y - mm.sy - 10
@@ -139,7 +139,7 @@ while SB == 0:
         
     if random.random() > 0.98: 
         aa = obj()
-        aa.put_img("D:/temp/alien.png")
+        aa.put_img("./alien.png")
         aa.change_size(40,40)
         aa.x = random.randrange(0, size[0]-aa.sx-round(ss.sx/2))
         aa.y = 10
@@ -192,7 +192,7 @@ while SB == 0:
     for a in a_list:
         a.show()
         
-    font = pygame.font.Font("C:/Windows/Fonts/BMDOHYEON_ttf.ttf", 20)
+    font = pygame.font.Font("C:/Windows/Fonts/Retro Gaming", 20)
     text_kill = font.render("killed : {} loss : {}".format(kill, loss), True, (255,255,0))
     screen.blit(text_kill, (10, 5))
     
@@ -208,10 +208,8 @@ while GO == 1:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             GO = 0
-    font = pygame.font.Font("C:/Windows/Fonts/BMDOHYEON_ttf.ttf", 40)
+    font = pygame.font.Font("C:/Windows/Fonts/Retro Gaming.ttf", 40)
     text = font.render("GAME OVER", True, (255,0,0))
     screen.blit(text, (80, round(size[1]/2-50)))
     pygame.display.flip()
 pygame.quit()
-​
-# [출처] 파이썬으로 게임 만들기 강의 모음 (pygame 라이브러리)|작성자 초보코딩
