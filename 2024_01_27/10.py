@@ -42,7 +42,7 @@ def crash(a, b):
     else : 
         return False
 ss = obj()
-ss.put_img("./ss.png")
+ss.put_img("./pilot.png")  
 ss.change_size(50,80)
 ss.x = round(size[0]/2- ss.sx/2)
 ss.y = size[1] -ss.sy - 15
@@ -66,7 +66,7 @@ loss = 0
 # 4-0. 게임 시작 대기 화면
 SB = 0
 while SB == 0:
-    clock.tick(60)
+    clock.tick(200)
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
