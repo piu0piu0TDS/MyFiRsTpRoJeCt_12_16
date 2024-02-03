@@ -42,7 +42,7 @@ def crash(a, b):
     else : 
         return False
 ss = obj()
-ss.put_img("./pilot.png")  
+ss.put_img("./ss.png")  
 ss.change_size(50,80)
 ss.x = round(size[0]/2- ss.sx/2)
 ss.y = size[1] -ss.sy - 15
